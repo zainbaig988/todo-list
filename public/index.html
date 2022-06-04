@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List App</title>
+    <link rel="stylesheet" href="mystyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-database.js"></script>
+
+<script>
+
+ const firebaseConfig = {
+    apiKey: "AIzaSyACxLPtgAUcSjbolpCBlIlsMPKxq5pI-4o",
+    authDomain: "todo-app-5e1dd.firebaseapp.com",
+    projectId: "todo-app-5e1dd",
+    storageBucket: "todo-app-5e1dd.appspot.com",
+    messagingSenderId: "506471756861",
+    appId: "1:506471756861:web:3174959812feb9ca012654",
+    measurementId: "G-70M5LKGZD2"
+  };
+
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+
+</head>
+<body>
+    <h1><span class="heading">TODO</span> List</h1>
+    <div class="input_div">
+        <input type="text" class="input" onchange="handleinput()" placeholder="What do you want to do...">
+        <button class="addButton"><i class="fas fa-plus"></i></button>
+    </div>
+
+    <div class="container">
+       <!--  <div class="item">
+            <input type="text" class="item_input"  disabled>
+            <button class = "editButton">Edit</button>
+            <button class="removeButton">Remove</button>
+        </div> -->
+    </div>
+    <script>
+        const handleinput = (e)=>{
+           let appItem = "";
+        return  appItem = e.target.value
+        
+        console.log(appItem)
+        }
+    </script>
+
+    <script type="text/javascript" src="main.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"></script>
+</body>
+</html>
